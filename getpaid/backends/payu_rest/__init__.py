@@ -231,7 +231,7 @@ class PaymentProcessor(PaymentProcessorBase):
             extOrderId=str(self.payment.pk),
             # validityTime='',
             # additionalDescription='',
-            continueUrl='http://127.0.0.1:8000/',
+            continueUrl='http{}://{}'.format('s' if use_ssl else '', current_site),
             # payMethods=None,
         )
 
